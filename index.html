@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quran Stories for Kids — Beautiful Illustrated Ebook</title>
+  <meta name="description" content="Beautifully illustrated Quran stories your kids will actually love. Instant PDF download. Made for Muslim families." />
+  <meta property="og:title" content="Quran Stories for Kids — Illustrated Ebook" />
+  <meta property="og:description" content="Bedtime stories rooted in faith. Beautiful illustrations your kids will love." />
+  <meta property="og:type" content="product" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDF8F0',
+            'cream-dark': '#F5EDE0',
+            sage: {
+              50: '#F0F5F0',
+              100: '#E1EBE1',
+              200: '#C3D7C3',
+              300: '#A5C3A5',
+              400: '#7DAE7D',
+              500: '#5A8F5A',
+              600: '#4A7A4A',
+              700: '#3A6140',
+              800: '#2D4D32',
+              900: '#1F3A24',
+            },
+            gold: {
+              50: '#FFF9EB',
+              100: '#FFF0CC',
+              200: '#FFE199',
+              300: '#FFD166',
+              400: '#FFC233',
+              500: '#D4A24C',
+              600: '#B8862D',
+              700: '#8B6914',
+            },
+            warm: {
+              50: '#FEFCF9',
+              100: '#FDF8F0',
+              200: '#F9EFE0',
+              300: '#F0E0C8',
+              400: '#E0C8A0',
+              500: '#C4A878',
+              600: '#A88C60',
+            },
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+            display: ['Playfair Display', 'Georgia', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* Subtle glow on CTA */
+    .cta-glow {
+      box-shadow: 0 0 30px rgba(90, 143, 90, 0.25), 0 4px 15px rgba(90, 143, 90, 0.15);
+    }
+    .cta-glow:hover {
+      box-shadow: 0 0 40px rgba(90, 143, 90, 0.35), 0 6px 20px rgba(90, 143, 90, 0.25);
+    }
+
+    /* Image placeholders */
+    .img-placeholder {
+      background: linear-gradient(135deg, #E1EBE1 0%, #F0E0C8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7DAE7D;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: 2px dashed #C3D7C3;
+      border-radius: 1rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .img-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, transparent 60%);
+    }
+
+    /* Decorative dot pattern */
+    .dot-pattern {
+      background-image: radial-gradient(circle, #C3D7C3 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Sticky CTA animation */
+    .sticky-cta-enter {
+      animation: slideUp 0.3s ease-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Gentle float animation for hero image */
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .float-animation {
+      animation: gentleFloat 4s ease-in-out infinite;
+    }
+
+    /* Star decoration */
+    .star-decoration::before {
+      content: '✦';
+      color: #D4A24C;
+      margin-right: 0.5rem;
+    }
+    .star-decoration::after {
+      content: '✦';
+      color: #D4A24C;
+      margin-left: 0.5rem;
+    }
+
+    /* FAQ accordion */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-answer.open { max-height: 500px; }
+
+    /* Fade in on scroll */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-cream text-sage-900 antialiased overflow-x-hidden">
+
+  <!-- ============================================================ -->
+  <!-- ANNOUNCEMENT BAR -->
+  <!-- ============================================================ -->
+  <div class="bg-sage-700 text-white text-center py-2.5 px-4 text-sm font-medium tracking-wide">
+    <span class="inline-flex items-center gap-2">
+      <span class="inline-block w-2 h-2 bg-gold-300 rounded-full animate-pulse"></span>
+      Ramadan Special — 50% Off for a Limited Time 🌙
+      <span class="inline-block w-2 h-2 bg-gold-300 rounded-full animate-pulse"></span>
+    </span>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- HERO SECTION -->
+  <!-- ============================================================ -->
+  <section class="relative overflow-hidden">
+    <!-- Background decoration -->
+    <div class="absolute inset-0 dot-pattern opacity-30 pointer-events-none"></div>
+    <div class="absolute top-20 right-0 w-72 h-72 bg-sage-200 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 md:pt-16 md:pb-24">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <!-- Copy -->
+        <div class="order-2 md:order-1 text-center md:text-left">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 bg-sage-50 border border-sage-200 rounded-full px-4 py-1.5 mb-6">
+            <span class="text-xs font-semibold text-sage-600 uppercase tracking-wider">As seen on TikTok</span>
+            <span class="text-xs">🎬</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] leading-tight font-bold text-sage-900 mb-5">
+            Quran Stories<br class="hidden sm:block" />
+            <span class="text-sage-600">Your Kids Will</span><br class="hidden sm:block" />
+            <span class="relative inline-block">
+              Actually Love
+              <svg class="absolute -bottom-1 left-0 w-full" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 5.5C50 2 150 2 198 5.5" stroke="#D4A24C" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-sage-700 leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
+            Beautifully illustrated stories from the Quran — designed for bedtime, built for little hearts. A PDF ebook your children will ask for again and again.
+          </p>
+
+          <!-- CTA -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 mb-8">
+            <a href="#buy" class="cta-glow w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-lg px-8 py-4 rounded-2xl transition-all duration-200 transform hover:scale-[1.02]">
+              Get the Ebook — <span class="line-through opacity-60 text-base">$19.99</span> $9.99
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <span class="text-sm text-sage-500 font-medium">Instant PDF Download</span>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 text-sm text-sage-600">
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              Instant download
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              Secure checkout
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              Family friendly
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              No subscription
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="order-1 md:order-2 flex justify-center">
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-br from-sage-200 to-gold-100 rounded-3xl blur-2xl opacity-40"></div>
+            <img src="assets/hero.png" alt="Illustrated girl reading Quran stories" class="relative w-72 h-96 sm:w-80 sm:h-[28rem] lg:w-[22rem] lg:h-[30rem] float-animation object-cover rounded-2xl" />
+            <!-- Floating badge -->
+            <div class="absolute -bottom-3 -left-3 bg-white shadow-lg rounded-2xl px-4 py-2.5 flex items-center gap-2 border border-sage-100">
+              <span class="text-2xl">⭐</span>
+              <div>
+                <div class="text-sm font-bold text-sage-800">4.9 Rating</div>
+                <div class="text-xs text-sage-500">From parents</div>
+              </div>
+            </div>
+            <!-- Floating badge 2 -->
+            <div class="absolute -top-2 -right-2 bg-white shadow-lg rounded-2xl px-4 py-2.5 border border-sage-100">
+              <div class="text-xs font-bold text-sage-700">PDF Ebook</div>
+              <div class="text-xs text-sage-500">30+ pages</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TIKTOK SOCIAL PROOF BAR -->
+  <!-- ============================================================ -->
+  <section class="bg-white border-y border-sage-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center">
+        <p class="text-sage-600 font-medium text-sm sm:text-base">
+          <span class="text-sage-800 font-semibold">"My kids won't stop asking for the next story — please make more!"</span> — real comment from our TikTok
+        </p>
+        <div class="flex items-center gap-1">
+          <span class="text-xs text-sage-400">|</span>
+          <span class="text-sm text-sage-500 font-medium">100K+ views</span>
+          <span class="text-xs text-sage-400">|</span>
+          <span class="text-sm text-sage-500 font-medium">Thousands of saves & shares</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PREVIEW SECTION -->
+  <!-- ============================================================ -->
+  <section id="preview" class="fade-in-section py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider">Sneak Peek</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-sage-900 mt-2 mb-4">See What's Inside</h2>
+        <p class="text-sage-600 text-lg max-w-2xl mx-auto">Every page is hand-illustrated with warmth and care. Stories your kids will remember — and values that stay with them.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
+        <!-- Preview 1 -->
+        <div class="group">
+          <img src="assets/preview-1.png" alt="The Story of Prophet Nuh — ebook page" class="aspect-[3/4] w-full rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 object-cover" />
+          <p class="text-center mt-3 text-sm text-sage-600 font-medium">The Story of Prophet Nuh</p>
+        </div>
+        <!-- Preview 2 -->
+        <div class="group">
+          <img src="assets/preview-2.png" alt="Beautiful hand-drawn illustration — ebook page" class="aspect-[3/4] w-full rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 sm:-translate-y-4 object-cover" />
+          <p class="text-center mt-3 text-sm text-sage-600 font-medium sm:-translate-y-4">Beautiful hand-drawn illustrations</p>
+        </div>
+        <!-- Preview 3 -->
+        <div class="group">
+          <img src="assets/preview-3.png" alt="Simple words, deep meaning — ebook page" class="aspect-[3/4] w-full rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 object-cover" />
+          <p class="text-center mt-3 text-sm text-sage-600 font-medium">Simple words, deep meaning</p>
+        </div>
+      </div>
+
+      <!-- Mid-section CTA -->
+      <div class="text-center mt-12">
+        <a href="#buy" class="cta-glow inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-base px-7 py-3.5 rounded-2xl transition-all duration-200 transform hover:scale-[1.02]">
+          Ramadan Special — <span class="line-through opacity-60 text-sm">$19.99</span> $9.99
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- WHAT'S INSIDE -->
+  <!-- ============================================================ -->
+  <section class="fade-in-section bg-white py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider">What You Get</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-sage-900 mt-2 mb-4">Everything Inside the Ebook</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div class="flex items-start gap-4 bg-cream rounded-2xl p-5 border border-sage-100">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center text-lg">📖</div>
+          <div>
+            <h3 class="font-semibold text-sage-800 mb-1">Quran Stories Retold Simply</h3>
+            <p class="text-sm text-sage-600">Age-appropriate retellings of beloved Prophetic stories. Easy for kids 3–10 to follow along.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-cream rounded-2xl p-5 border border-sage-100">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center text-lg">🎨</div>
+          <div>
+            <h3 class="font-semibold text-sage-800 mb-1">Cinematic Illustrations</h3>
+            <p class="text-sm text-sage-600">Warm, beautiful comic-style art on every page. Kids can't stop looking at them.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-cream rounded-2xl p-5 border border-sage-100">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center text-lg">🌙</div>
+          <div>
+            <h3 class="font-semibold text-sage-800 mb-1">Perfect for Bedtime</h3>
+            <p class="text-sm text-sage-600">Short enough for one sitting. Calming tone and pacing for winding down before sleep.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-cream rounded-2xl p-5 border border-sage-100">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center text-lg">💎</div>
+          <div>
+            <h3 class="font-semibold text-sage-800 mb-1">Values That Stick</h3>
+            <p class="text-sm text-sage-600">Each story highlights a clear moral — patience, gratitude, trust in Allah — woven into the narrative.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-cream rounded-2xl p-5 border border-sage-100">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center text-lg">📱</div>
+          <div>
+            <h3 class="font-semibold text-sage-800 mb-1">Read Anywhere</h3>
+            <p class="text-sm text-sage-600">PDF works on any device — phone, tablet, laptop. Read at home, in the car, or on the go.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 bg-cream rounded-2xl p-5 border border-sage-100">
+          <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center text-lg">🤲</div>
+          <div>
+            <h3 class="font-semibold text-sage-800 mb-1">Made with Intention</h3>
+            <p class="text-sm text-sage-600">Created by Muslims, for Muslim families. Every detail is thoughtful and faith-centered.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BENEFITS / WHY THIS EBOOK -->
+  <!-- ============================================================ -->
+  <section class="fade-in-section py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 dot-pattern opacity-20 pointer-events-none"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider">Why Parents Love It</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-sage-900 mt-2 mb-4">Bedtime Stories That Actually Matter</h2>
+        <p class="text-sage-600 text-lg max-w-2xl mx-auto">You want your kids to grow up with faith, values, and a love for the Quran. This ebook makes that easy — and enjoyable.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Benefit 1 -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-sage-100 text-center hover:shadow-md transition-shadow">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-sage-100 to-sage-200 flex items-center justify-center text-3xl mx-auto mb-5">🌟</div>
+          <h3 class="text-xl font-bold text-sage-800 mb-3">Kids Actually Enjoy It</h3>
+          <p class="text-sage-600 leading-relaxed">No more forcing Islamic content. The illustrations and stories pull kids in naturally. They'll ask you to read it again.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-sage-100 text-center hover:shadow-md transition-shadow">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-50 to-gold-100 flex items-center justify-center text-3xl mx-auto mb-5">🤍</div>
+          <h3 class="text-xl font-bold text-sage-800 mb-3">Parents Feel Good About It</h3>
+          <p class="text-sage-600 leading-relaxed">Replace random screen time with something meaningful. A moment of connection over faith, right before sleep.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="bg-white rounded-3xl p-8 shadow-sm border border-sage-100 text-center hover:shadow-md transition-shadow">
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-sage-100 to-gold-50 flex items-center justify-center text-3xl mx-auto mb-5">📚</div>
+          <h3 class="text-xl font-bold text-sage-800 mb-3">Stories They'll Remember</h3>
+          <p class="text-sage-600 leading-relaxed">These aren't just stories — they're memories. The kind your kids carry with them as they grow up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- COMPARISON SECTION -->
+  <!-- ============================================================ -->
+  <section class="fade-in-section bg-white py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-sage-900 mb-4">This vs. What They're Watching Now</h2>
+        <p class="text-sage-600 text-lg">You know the difference. Your kids deserve better.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- The bad -->
+        <div class="bg-red-50 rounded-3xl p-8 border border-red-100">
+          <div class="text-lg font-bold text-red-800 mb-5 flex items-center gap-2">
+            <span class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center text-sm">✕</span>
+            Random Screen Time
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-red-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span class="text-sm">Loud, chaotic, overstimulating content</span>
+            </li>
+            <li class="flex items-start gap-3 text-red-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span class="text-sm">No real values or lessons</span>
+            </li>
+            <li class="flex items-start gap-3 text-red-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span class="text-sm">Passive consumption, zero engagement</span>
+            </li>
+            <li class="flex items-start gap-3 text-red-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span class="text-sm">You feel guilty handing them the screen</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- The good -->
+        <div class="bg-sage-50 rounded-3xl p-8 border border-sage-200 ring-2 ring-sage-300 ring-offset-2 ring-offset-cream">
+          <div class="text-lg font-bold text-sage-800 mb-5 flex items-center gap-2">
+            <span class="w-8 h-8 bg-sage-200 rounded-lg flex items-center justify-center text-sm">✓</span>
+            Quran Stories for Kids
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sage-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm">Calm, beautiful, illustrated stories</span>
+            </li>
+            <li class="flex items-start gap-3 text-sage-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm">Rooted in Quran, faith, and real values</span>
+            </li>
+            <li class="flex items-start gap-3 text-sage-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm">Quality bonding time together</span>
+            </li>
+            <li class="flex items-start gap-3 text-sage-700">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-sage-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span class="text-sm">You feel proud of what they're learning</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- TIKTOK COMMENTS SECTION -->
+  <!-- ============================================================ -->
+  <section class="fade-in-section py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-cream to-white pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider">Real Reactions</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-sage-900 mt-2 mb-4">What Parents Are Saying</h2>
+        <p class="text-sage-600 text-lg">These are real comments from our TikTok videos.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-gold-400 text-sm">★★★★★</span>
+          </div>
+          <p class="text-sage-700 text-sm leading-relaxed mb-4">"My daughter literally asked me to read it 3 times before bed. She keeps pointing at the pictures and asking questions about the Prophets. This is exactly what I was looking for."</p>
+          <div class="flex items-center gap-3 pt-3 border-t border-sage-50">
+            <div class="w-8 h-8 rounded-full bg-sage-200 flex items-center justify-center text-xs font-bold text-sage-600">A</div>
+            <div>
+              <div class="text-sm font-semibold text-sage-800">Amina K.</div>
+              <div class="text-xs text-sage-400">Mother of 2</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-gold-400 text-sm">★★★★★</span>
+          </div>
+          <p class="text-sage-700 text-sm leading-relaxed mb-4">"I saw this on TikTok and immediately bought it. The illustrations are stunning — my kids thought it was a real cartoon. Finally something Islamic that doesn't look outdated."</p>
+          <div class="flex items-center gap-3 pt-3 border-t border-sage-50">
+            <div class="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center text-xs font-bold text-gold-600">F</div>
+            <div>
+              <div class="text-sm font-semibold text-sage-800">Fatima R.</div>
+              <div class="text-xs text-sage-400">TikTok follower</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100 sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-1 mb-3">
+            <span class="text-gold-400 text-sm">★★★★★</span>
+          </div>
+          <p class="text-sage-700 text-sm leading-relaxed mb-4">"As a father, I love reading this with my son. It opens up conversations about faith I didn't know how to start. The quality is amazing for the price."</p>
+          <div class="flex items-center gap-3 pt-3 border-t border-sage-50">
+            <div class="w-8 h-8 rounded-full bg-sage-100 flex items-center justify-center text-xs font-bold text-sage-600">Y</div>
+            <div>
+              <div class="text-sm font-semibold text-sage-800">Yusuf M.</div>
+              <div class="text-xs text-sage-400">Father of 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TikTok comment screenshot placeholder -->
+      <div class="mt-10 max-w-md mx-auto">
+        <img src="assets/tiktok-comment.png" alt="Real TikTok comment asking for the ebook" class="aspect-video w-full rounded-2xl object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FAQ SECTION -->
+  <!-- ============================================================ -->
+  <section class="fade-in-section bg-white py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider">Common Questions</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-sage-900 mt-2">Frequently Asked</h2>
+      </div>
+
+      <div class="space-y-3" id="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-cream rounded-2xl border border-sage-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+            <span class="font-semibold text-sage-800 pr-4">What age is this ebook for?</span>
+            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-sage-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sage-600 text-sm leading-relaxed">The stories are designed for children ages 3–10. Younger children will love looking at the illustrations while you read aloud. Older children can read along on their own. It's designed to be a shared experience.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-cream rounded-2xl border border-sage-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+            <span class="font-semibold text-sage-800 pr-4">How do I receive the ebook?</span>
+            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-sage-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sage-600 text-sm leading-relaxed">After purchase, you'll receive an instant download link. The ebook is a PDF file that works on any device — phone, tablet, or laptop. You can also print it if you prefer. No app required.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-cream rounded-2xl border border-sage-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+            <span class="font-semibold text-sage-800 pr-4">Is this a one-time payment?</span>
+            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-sage-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sage-600 text-sm leading-relaxed">Yes, absolutely. Pay once ($9.99 during our Ramadan special) and the ebook is yours forever. No subscription. No hidden fees. No upsells. Just the ebook.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-cream rounded-2xl border border-sage-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+            <span class="font-semibold text-sage-800 pr-4">Will there be more stories?</span>
+            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-sage-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sage-600 text-sm leading-relaxed">Yes! This is the first in a series. A bundle with more Quran stories is coming soon. If you buy now, you'll be the first to know when the next stories are ready.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-cream rounded-2xl border border-sage-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+            <span class="font-semibold text-sage-800 pr-4">Can I share it with my family?</span>
+            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-sage-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sage-600 text-sm leading-relaxed">The ebook is for personal and family use. You're welcome to read it with all your children. We just ask that you don't redistribute it publicly. If you'd like to gift it, we'd love that — sharing the khayr.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item bg-cream rounded-2xl border border-sage-100 overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between p-5 text-left" onclick="toggleFaq(this)">
+            <span class="font-semibold text-sage-800 pr-4">Is the content Quranically accurate?</span>
+            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-sage-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-answer px-5 pb-5">
+            <p class="text-sage-600 text-sm leading-relaxed">Yes. Every story is based on Quran and authentic sources. The language is simplified for children, but the core message and facts are preserved with care. We take this responsibility seriously.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- BUNDLE TEASER + EMAIL -->
+  <!-- ============================================================ -->
+  <section class="fade-in-section py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-sage-50 to-cream pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-sage-100">
+        <span class="inline-block bg-gold-100 text-gold-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">Coming Soon</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-sage-900 mb-3">The Full Story Bundle</h2>
+        <p class="text-sage-600 mb-8 max-w-md mx-auto">More Quran stories, more illustrations, more bedtime magic. Be the first to know when the complete bundle drops.</p>
+
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleWaitlist(event)">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+            class="flex-1 px-5 py-3.5 rounded-xl border border-sage-200 bg-cream text-sage-800 placeholder-sage-400 focus:outline-none focus:ring-2 focus:ring-sage-300 focus:border-sage-300 text-sm"
+          />
+          <button type="submit" class="bg-sage-600 hover:bg-sage-700 text-white font-semibold px-6 py-3.5 rounded-xl transition-colors text-sm whitespace-nowrap">
+            Notify Me
+          </button>
+        </form>
+        <p class="text-xs text-sage-400 mt-3">No spam. Just one email when it's ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FINAL CTA SECTION -->
+  <!-- ============================================================ -->
+  <section id="buy" class="fade-in-section py-16 md:py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-cream via-sage-50 to-cream pointer-events-none"></div>
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sage-200 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
+
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider star-decoration">Ramadan Special</span>
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-sage-900 mt-4 mb-5">
+        Give Your Kids Stories<br />Worth Remembering
+      </h2>
+      <p class="text-lg text-sage-600 mb-10 max-w-xl mx-auto">
+        One ebook. Endless bedtimes filled with faith, wonder, and beautiful illustrations.
+      </p>
+
+      <!-- Product card -->
+      <div class="bg-white rounded-3xl p-8 md:p-10 shadow-lg border border-sage-100 max-w-lg mx-auto mb-8">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <img src="assets/ebook-cover.png" alt="Quran Stories for Kids ebook cover" class="w-20 h-28 rounded-xl flex-shrink-0 object-cover" />
+          <div class="text-left">
+            <h3 class="font-bold text-lg text-sage-900">Quran Stories for Kids</h3>
+            <p class="text-sm text-sage-500">Illustrated PDF Ebook</p>
+            <div class="flex items-center gap-1 mt-1">
+              <span class="text-gold-400 text-xs">★★★★★</span>
+              <span class="text-xs text-sage-400">4.9/5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-sage-100 pt-6 mb-6">
+          <div class="inline-block bg-gold-50 border border-gold-200 rounded-full px-3 py-1 text-xs font-semibold text-gold-700 mb-3">Ramadan Special — 50% Off</div>
+          <div class="flex items-baseline justify-center gap-2 mb-1">
+            <span class="text-xl text-sage-400 line-through">$19.99</span>
+            <span class="text-4xl font-bold text-sage-900">$9.99</span>
+          </div>
+          <p class="text-sm text-sage-500">One-time payment. Yours forever.</p>
+        </div>
+
+        <a href="#" class="cta-glow w-full inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-lg px-8 py-4 rounded-2xl transition-all duration-200 transform hover:scale-[1.02] mb-4 block">
+          Get Instant Access
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        </a>
+
+        <!-- Trust row -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-sage-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Secure checkout
+          </span>
+          <span class="flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Instant download
+          </span>
+          <span class="flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            PDF format
+          </span>
+        </div>
+      </div>
+
+      <p class="text-sm text-sage-500 italic">Made by Muslims, for Muslim families.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- COMPANION APP CROSS-PROMO (soft) -->
+  <!-- ============================================================ -->
+  <section class="fade-in-section bg-white py-12 md:py-16 border-t border-sage-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-br from-sage-50 to-cream rounded-3xl p-8 border border-sage-100">
+        <img src="assets/app-icon.png" alt="Companion Islamic app icon" class="w-24 h-24 md:w-32 md:h-32 rounded-2xl flex-shrink-0 object-cover" />
+        <div class="text-center md:text-left">
+          <span class="text-xs font-semibold text-gold-600 uppercase tracking-wider">Also Available</span>
+          <h3 class="font-display text-xl font-bold text-sage-900 mt-1 mb-2">Our Companion Islamic App</h3>
+          <p class="text-sage-600 text-sm mb-4 max-w-md">Explore more Quran stories, daily duas, and interactive Islamic learning — all in one beautiful app designed for Muslim families.</p>
+          <a href="#" class="inline-flex items-center gap-2 text-sage-600 hover:text-sage-800 font-semibold text-sm transition-colors">
+            Learn more
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <footer class="bg-sage-900 text-sage-300 py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid sm:grid-cols-3 gap-8 mb-10">
+        <!-- Brand -->
+        <div>
+          <h4 class="font-display text-lg font-bold text-white mb-3">Quran Stories for Kids</h4>
+          <p class="text-sm text-sage-400 leading-relaxed">Beautiful illustrated stories from the Quran. Made with love for the next generation of Muslims.</p>
+        </div>
+        <!-- Links -->
+        <div>
+          <h5 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Links</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#preview" class="hover:text-white transition-colors">Preview</a></li>
+            <li><a href="#buy" class="hover:text-white transition-colors">Buy Now</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h5 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Follow Us</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition-colors">TikTok</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-sage-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-sage-500">&copy; 2026 Quran Stories for Kids. All rights reserved.</p>
+        <p class="text-xs text-sage-500">Made with intention. Built with care.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- STICKY MOBILE CTA -->
+  <!-- ============================================================ -->
+  <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-sage-200 p-3 z-50 hidden md:hidden">
+    <div class="flex items-center justify-between gap-3 max-w-lg mx-auto">
+      <div class="flex-1 min-w-0">
+        <div class="font-bold text-sage-900 text-sm">Quran Stories for Kids</div>
+        <div class="text-xs text-sage-500">PDF Ebook — <span class="line-through">$19.99</span> $9.99</div>
+      </div>
+      <a href="#buy" class="cta-glow flex-shrink-0 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all">
+        Get Now
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SCRIPTS -->
+  <!-- ============================================================ -->
+  <script>
+    // FAQ Toggle
+    function toggleFaq(button) {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isOpen = answer.classList.contains('open');
+
+      // Close all others
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+
+    // Sticky CTA visibility on mobile
+    const stickyCta = document.getElementById('sticky-cta');
+    const heroSection = document.querySelector('section');
+    let stickyShown = false;
+
+    function handleScroll() {
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+      if (heroBottom < 0 && !stickyShown) {
+        stickyCta.classList.remove('hidden');
+        stickyCta.classList.add('sticky-cta-enter');
+        stickyShown = true;
+      } else if (heroBottom >= 0 && stickyShown) {
+        stickyCta.classList.add('hidden');
+        stickyShown = false;
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Fade in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-section').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Waitlist form handler
+    function handleWaitlist(e) {
+      e.preventDefault();
+      const form = e.target;
+      const input = form.querySelector('input');
+      const email = input.value;
+
+      // Replace with your actual form handler / API endpoint
+      form.innerHTML = '<p class="text-sage-600 font-medium py-2">You\'re on the list! We\'ll let you know when the bundle is ready. JazakAllahu khairan.</p>';
+    }
+  </script>
+
+</body>
+</html>
