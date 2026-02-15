@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quran-stories-for-kids.vercel.app/sitemap.xml
