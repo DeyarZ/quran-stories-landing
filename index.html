@@ -872,7 +872,7 @@
   <!-- ============================================================ -->
   <!-- STICKY MOBILE CTA -->
   <!-- ============================================================ -->
-  <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-sage-200 p-3 z-50 hidden md:hidden">
+  <div id="sticky-cta" class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-sage-200 p-3 z-50 md:hidden">
     <div class="flex items-center justify-between gap-3 max-w-lg mx-auto">
       <div class="flex-1 min-w-0">
         <div class="font-bold text-sage-900 text-sm">Quran Stories for Kids</div>
@@ -897,15 +897,7 @@
       if (!isOpen) { answer.classList.add('open'); icon.style.transform = 'rotate(180deg)'; }
     }
 
-    const stickyCta = document.getElementById('sticky-cta');
-    const heroSection = document.querySelector('section');
-    let stickyShown = false;
-    function handleScroll() {
-      const heroBottom = heroSection.getBoundingClientRect().bottom;
-      if (heroBottom < 0 && !stickyShown) { stickyCta.classList.remove('hidden'); stickyCta.classList.add('sticky-cta-enter'); stickyShown = true; }
-      else if (heroBottom >= 0 && stickyShown) { stickyCta.classList.add('hidden'); stickyShown = false; }
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Sticky CTA always visible on mobile
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
