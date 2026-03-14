@@ -67,6 +67,19 @@
   }
   </script>
 
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.salahreminders.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.salahreminders.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Islamic Stories for Kids", "item": "https://www.salahreminders.com/blog/islamic-stories-for-kids.html"}
+    ]
+  }
+  </script>
+
   <!-- FAQ JSON-LD -->
   <script type="application/ld+json">
   {
@@ -116,6 +129,21 @@
     </div>
   </nav>
 
+  <!-- BREADCRUMB -->
+  <div class="bg-cream border-b border-sage-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-3">
+      <nav aria-label="Breadcrumb" class="text-sm text-sage-500">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:text-sage-700 transition-colors">Home</a></li>
+          <li class="text-sage-300">›</li>
+          <li><a href="/blog/" class="hover:text-sage-700 transition-colors">Blog</a></li>
+          <li class="text-sage-300">›</li>
+          <li class="text-sage-700 font-medium truncate max-w-[200px] sm:max-w-none">Islamic Stories for Kids</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
   <!-- ARTICLE -->
   <article class="py-12 sm:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
@@ -141,7 +169,7 @@
       <!-- Content -->
       <div class="prose max-w-none space-y-8 text-sage-800">
 
-        <p class="text-base leading-relaxed">I still remember the first time my daughter asked me to tell her an Islamic story. She was four, curled up under her blanket, and instead of asking for another picture book, she said, "Tell me about the prophets, Mama." In that moment, I realized something profound: our children are hungry for these stories. They want to know about the people who loved Allah, who faced challenges, who stayed strong. They want heroes they can believe in.</p>
+        <p class="text-base leading-relaxed">I still remember the first time my daughter asked me to tell her an Islamic story. She was four, curled up under her blanket, and instead of asking for another picture book, she said, "Tell me about the prophets, Mama." In that moment, I realized something profound: our children are hungry for these stories. They want to know about the people who loved Allah, who faced challenges, who stayed strong. They want heroes they can believe in. (If you're looking for <a href="/blog/quran-stories-for-kids-bedtime.html" class="text-sage-600 font-semibold underline decoration-sage-300 hover:text-sage-800 transition-colors">perfect bedtime Quran stories</a>, we've curated seven of the most beautiful ones.)</p>
 
         <p class="text-base leading-relaxed">And the beautiful thing? Islam gives us an endless treasury of stories to share. Stories that teach patience, kindness, bravery, and faith. Stories that have been passed down for over 1,400 years because they touch something deep in the human soul.</p>
 
@@ -284,7 +312,8 @@
           <li><strong>Bedtime stories:</strong> That quiet moment before sleep is perfect. Their mind is calm and receptive.</li>
           <li><strong>Weekend storytelling sessions:</strong> Saturday or Sunday morning, make hot chocolate and gather for story time.</li>
           <li><strong>Car rides:</strong> Long drives are perfect for telling stories. No screens, just conversation and stories.</li>
-          <li><strong>After prayer:</strong> Tell a quick 2-minute story after Maghrib prayer. It creates a beautiful association between prayer and learning.</li>
+          <li><strong>After prayer:</strong> Tell a quick 2-minute story after Maghrib prayer. It creates a beautiful association between prayer and learning. (Speaking of prayer habits, here's <a href="/blog/teach-kids-salah-prayer-habit.html" class="text-sage-600 font-semibold underline decoration-sage-300 hover:text-sage-800 transition-colors">how to make salah a natural habit for your kids</a>.)</li>
+          <li><strong>During Ramadan:</strong> Make nightly story time a special Ramadan tradition alongside other <a href="/blog/ramadan-activities-for-kids.html" class="text-sage-600 font-semibold underline decoration-sage-300 hover:text-sage-800 transition-colors">meaningful Ramadan activities</a>.</li>
         </ul>
 
         <p class="text-base leading-relaxed">The key is consistency. When storytelling becomes a regular thing — something they can count on — that's when it becomes truly special.</p>
@@ -359,20 +388,33 @@
 
         <p class="text-base leading-relaxed">May Allah make our children among those who love His Book and follow the example of His prophets. Ameen. 💚</p>
 
-        <!-- Related Posts -->
-        <div class="mt-12 pt-8 border-t border-sage-200">
-          <h3 class="text-lg font-bold text-sage-900 mb-4">Continue Your Journey</h3>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <a href="/blog/quran-stories-for-kids-bedtime.html" class="bg-white rounded-xl p-5 border border-sage-100 hover:shadow-sm transition-shadow">
-              <p class="font-semibold text-sage-800 mb-1">7 Beautiful Quran Stories for Bedtime</p>
-              <p class="text-sm text-sage-500">Prophet stories retold for little ones →</p>
-            </a>
-            <a href="/blog/teach-kids-salah-prayer-habit.html" class="bg-white rounded-xl p-5 border border-sage-100 hover:shadow-sm transition-shadow">
-              <p class="font-semibold text-sage-800 mb-1">How to Make Salah a Habit for Your Kids</p>
-              <p class="text-sm text-sage-500">Practical tips without the fight →</p>
-            </a>
-          </div>
-        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- RELATED ARTICLES -->
+  <section class="bg-white py-12 border-t border-sage-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display text-2xl font-bold text-sage-900 mb-6">You might also enjoy</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/blog/quran-stories-for-kids-bedtime.html" class="group bg-cream rounded-xl p-5 border border-sage-100 hover:border-sage-300 hover:shadow-sm transition-all">
+          <p class="font-semibold text-sage-800 group-hover:text-sage-900 mb-2">7 Beautiful Quran Stories for Bedtime</p>
+          <p class="text-sm text-sage-600">Prophet stories retold perfectly for little ones</p>
+        </a>
+        <a href="/blog/teach-kids-salah-prayer-habit.html" class="group bg-cream rounded-xl p-5 border border-sage-100 hover:border-sage-300 hover:shadow-sm transition-all">
+          <p class="font-semibold text-sage-800 group-hover:text-sage-900 mb-2">Make Salah a Habit for Your Kids</p>
+          <p class="text-sm text-sage-600">Age-by-age guidance without the struggle</p>
+        </a>
+        <a href="/blog/ramadan-activities-for-kids.html" class="group bg-cream rounded-xl p-5 border border-sage-100 hover:border-sage-300 hover:shadow-sm transition-all">
+          <p class="font-semibold text-sage-800 group-hover:text-sage-900 mb-2">15 Ramadan Activities for Kids</p>
+          <p class="text-sm text-sage-600">Make the blessed month truly magical</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume article wrapper for proper structure -->
+  <article style="display:none;">
 
       </div>
     </div>

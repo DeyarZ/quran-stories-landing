@@ -67,6 +67,19 @@
   }
   </script>
 
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.salahreminders.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.salahreminders.com/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "7 Quran Stories for Bedtime", "item": "https://www.salahreminders.com/blog/quran-stories-for-kids-bedtime.html"}
+    ]
+  }
+  </script>
+
   <!-- FAQ JSON-LD -->
   <script type="application/ld+json">
   {
@@ -93,13 +106,28 @@
   <!-- NAV -->
   <nav class="bg-white/80 backdrop-blur-md border-b border-sage-100 sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-      <a href="/" class="font-display text-xl font-bold text-sage-800">Quran Stories for Kids</a>
+      <a href="/" class="font-display text-xl font-bold text-sage-800">Islamic Stories for Kids</a>
       <div class="flex items-center gap-6 text-sm font-medium text-sage-600">
         <a href="/" class="hover:text-sage-800 transition-colors">Home</a>
         <a href="/blog/" class="text-sage-800 border-b-2 border-sage-600 pb-0.5">Blog</a>
       </div>
     </div>
   </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="bg-cream border-b border-sage-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-3">
+      <nav aria-label="Breadcrumb" class="text-sm text-sage-500">
+        <ol class="flex items-center gap-1.5">
+          <li><a href="/" class="hover:text-sage-700 transition-colors">Home</a></li>
+          <li class="text-sage-300">›</li>
+          <li><a href="/blog/" class="hover:text-sage-700 transition-colors">Blog</a></li>
+          <li class="text-sage-300">›</li>
+          <li class="text-sage-700 font-medium truncate max-w-[200px] sm:max-w-none">7 Quran Stories for Bedtime</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
 
   <!-- ARTICLE -->
   <article class="py-12 sm:py-16">
@@ -126,7 +154,7 @@
       <!-- Content -->
       <div class="prose max-w-none space-y-8 text-sage-800">
 
-        <p class="text-base leading-relaxed">These are the stories I grew up hearing from my own parents, and now I get to pass them on. There's a deep joy in watching your child's eyes widen when they hear about Prophet Musa parting the sea, or when they ask, "But why did they throw Yusuf in the well?" You realize they're not just listening, they're <em>feeling</em> it.</p>
+        <p class="text-base leading-relaxed">These are the stories I grew up hearing from my own parents, and now I get to pass them on. There's a deep joy in watching your child's eyes widen when they hear about Prophet Musa parting the sea, or when they ask, "But why did they throw Yusuf in the well?" You realize they're not just listening, they're <em>feeling</em> it. (For a deeper look at why <a href="/blog/islamic-stories-for-kids.html" class="text-sage-600 font-semibold underline decoration-sage-300 hover:text-sage-800 transition-colors">Islamic storytelling matters so much</a>, we've written a complete guide.)</p>
 
         <p class="text-base leading-relaxed">Here are seven of our favorite Quran stories for kids, told simply, with the lessons that make them timeless. I hope they become part of your bedtime routine too.</p>
 
@@ -263,25 +291,38 @@
         <div class="mt-12 space-y-6">
           <h2 class="text-2xl font-bold text-sage-900">Making These Stories Part of Your Routine</h2>
           <p class="text-base leading-relaxed">Here's what I've learned: it doesn't have to be perfect. You don't need to have all the details memorized or tell the stories in classical Arabic. What matters is the warmth: your child snuggled close, your voice carrying these words, and the conversations that follow. "Why do you think Yusuf forgave his brothers?" "Would you have been brave like Ibrahim?" Those little conversations are where the real magic happens.</p>
-          <p class="text-base leading-relaxed">And if you want versions with beautiful illustrations that your kids can hold and flip through themselves, we put together a <a href="https://www.salahreminders.com" class="text-sage-600 font-semibold underline decoration-sage-300 hover:text-sage-800 transition-colors">Quran Stories ebook</a> that brings these stories to life with artwork kids genuinely love. It's been our favorite bedtime companion.</p>
+          <p class="text-base leading-relaxed">And if you want versions with beautiful illustrations that your kids can hold and flip through themselves, we put together a <a href="https://www.salahreminders.com" class="text-sage-600 font-semibold underline decoration-sage-300 hover:text-sage-800 transition-colors">Quran Stories ebook</a> that brings these stories to life with artwork kids genuinely love. It's been our favorite bedtime companion. (Pro tip: Pairing story time with <a href="/blog/teach-kids-salah-prayer-habit.html" class="text-sage-600 font-semibold underline decoration-sage-300 hover:text-sage-800 transition-colors">a consistent prayer routine</a> creates beautiful daily rhythms.)</p>
           <p class="text-base leading-relaxed">These stories have survived for over 1,400 years because they speak to something deep in the human heart. When you share them with your children, you're not just telling bedtime stories. You're connecting them to a legacy of faith, courage, and love that stretches back to the beginning of time.</p>
           <p class="text-base leading-relaxed">May Allah make our children among those who love His Book. 💚</p>
         </div>
 
-        <!-- Related Posts -->
-        <div class="mt-12 pt-8 border-t border-sage-200">
-          <h3 class="text-lg font-bold text-sage-900 mb-4">You might also enjoy</h3>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <a href="/blog/teach-kids-salah-prayer-habit.html" class="bg-white rounded-xl p-5 border border-sage-100 hover:shadow-sm transition-shadow">
-              <p class="font-semibold text-sage-800 mb-1">How to Make Salah a Habit for Your Kids</p>
-              <p class="text-sm text-sage-500">Practical tips without the fight →</p>
-            </a>
-            <a href="/blog/ramadan-activities-for-kids.html" class="bg-white rounded-xl p-5 border border-sage-100 hover:shadow-sm transition-shadow">
-              <p class="font-semibold text-sage-800 mb-1">Ramadan Activities for Kids</p>
-              <p class="text-sm text-sage-500">15 ways to make it special →</p>
-            </a>
-          </div>
-        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- RELATED ARTICLES -->
+  <section class="bg-white py-12 border-t border-sage-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display text-2xl font-bold text-sage-900 mb-6">You might also enjoy</h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <a href="/blog/islamic-stories-for-kids.html" class="group bg-cream rounded-xl p-5 border border-sage-100 hover:border-sage-300 hover:shadow-sm transition-all">
+          <p class="font-semibold text-sage-800 group-hover:text-sage-900 mb-2">Islamic Stories for Kids</p>
+          <p class="text-sm text-sage-600">The best stories to share with your children</p>
+        </a>
+        <a href="/blog/teach-kids-salah-prayer-habit.html" class="group bg-cream rounded-xl p-5 border border-sage-100 hover:border-sage-300 hover:shadow-sm transition-all">
+          <p class="font-semibold text-sage-800 group-hover:text-sage-900 mb-2">Make Salah a Habit for Your Kids</p>
+          <p class="text-sm text-sage-600">Age-by-age guidance without the struggle</p>
+        </a>
+        <a href="/blog/ramadan-activities-for-kids.html" class="group bg-cream rounded-xl p-5 border border-sage-100 hover:border-sage-300 hover:shadow-sm transition-all">
+          <p class="font-semibold text-sage-800 group-hover:text-sage-900 mb-2">15 Ramadan Activities for Kids</p>
+          <p class="text-sm text-sage-600">Make the blessed month truly magical</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume article wrapper for proper structure -->
+  <article style="display:none;">
 
       </div>
     </div>
@@ -292,8 +333,8 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="grid sm:grid-cols-3 gap-8 mb-10">
         <div>
-          <h4 class="font-display text-lg font-bold text-white mb-3">Quran Stories for Kids</h4>
-          <p class="text-sm text-sage-400 leading-relaxed">Beautiful illustrated stories from the Quran. Made with love for the next generation of Muslims.</p>
+          <h4 class="font-display text-lg font-bold text-white mb-3">Islamic Stories for Kids</h4>
+          <p class="text-sm text-sage-400 leading-relaxed">Beautiful illustrated stories from the Quran and Islamic history. Made with love for the next generation of Muslims.</p>
         </div>
         <div>
           <h5 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Links</h5>
@@ -312,7 +353,7 @@
         </div>
       </div>
       <div class="border-t border-sage-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-sage-500">&copy; 2026 Quran Stories for Kids. All rights reserved.</p>
+        <p class="text-xs text-sage-500">&copy; 2026 Islamic Stories for Kids. All rights reserved.</p>
         <p class="text-xs text-sage-500">Made with intention. Built with care.</p>
       </div>
     </div>
