@@ -41,6 +41,28 @@ html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, sans-serif; }
     .font-display { font-family: 'Playfair Display', 'Playfair Display Fallback', Georgia, serif; }
 
+    /* Carousel: hide scrollbar, grid on desktop */
+    .book-carousel::-webkit-scrollbar { display: none; }
+    @media (min-width: 640px) {
+      .book-carousel {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        gap: 2rem !important;
+      }
+      .book-carousel > .book-card {
+        width: auto !important;
+        max-width: none !important;
+        flex-shrink: unset !important;
+      }
+    }
+    @media (min-width: 1024px) {
+      .book-carousel { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+    }
+
     .cta-glow {
       box-shadow: 0 0 30px rgba(90, 143, 90, 0.25), 0 4px 15px rgba(90, 143, 90, 0.15);
     }
@@ -453,10 +475,10 @@ html { scroll-behavior: smooth; }
         <p class="text-sage-600 text-sm uppercase tracking-wider font-medium">Or buy individually</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="book-carousel" style="display:flex;gap:1.5rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:1rem;margin:0 -1rem;padding-left:1rem;padding-right:1rem;">
 
         <!-- Book 1: Nusaybah -->
-        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm">
+        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm" style="scroll-snap-align:center;flex-shrink:0;width:80vw;max-width:22rem;">
           <div class="bg-gradient-to-br from-sage-50 to-gold-50 px-8 pt-5 pb-8 flex flex-col items-center gap-4">
             <span class="bg-gold-100 text-gold-700 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">⭐ Bestseller ⭐</span>
             <img src="assets/ebook-cover-nusaybah.webp" width="256" height="256" loading="lazy" style="aspect-ratio:1/1" alt="Nusaybah The Brave Heart - illustrated Islamic ebook for kids" class="w-64 h-auto rounded-2xl shadow-lg" />
@@ -487,7 +509,7 @@ html { scroll-behavior: smooth; }
         </div>
 
         <!-- Book 2: Lubna -->
-        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm">
+        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm" style="scroll-snap-align:center;flex-shrink:0;width:80vw;max-width:22rem;">
           <div class="bg-gradient-to-br from-gold-50 to-sage-50 px-8 pt-5 pb-8 flex flex-col items-center gap-4">
             <span class="bg-sage-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">✨ New ✨</span>
             <img src="assets/ebook-cover-lubna.webp" width="256" height="256" loading="lazy" style="aspect-ratio:1/1" alt="Lubna of Córdoba - The Girl Who Loved Books, illustrated Islamic ebook" class="w-64 h-auto rounded-2xl shadow-lg" />
@@ -517,7 +539,7 @@ html { scroll-behavior: smooth; }
         </div>
 
         <!-- Book 3: Asmaa -->
-        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm">
+        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm" style="scroll-snap-align:center;flex-shrink:0;width:80vw;max-width:22rem;">
           <div class="bg-gradient-to-br from-sage-50 to-warm-200 px-8 pt-5 pb-8 flex flex-col items-center gap-4">
             <span class="bg-sage-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">✨ New ✨</span>
             <img src="assets/ebook-cover-asmaa.webp" width="256" height="256" loading="lazy" style="aspect-ratio:1/1" alt="Asmaa Bint Yazeed - The Orator. The Warrior. Illustrated Islamic ebook" class="w-64 h-auto rounded-2xl shadow-lg" />
