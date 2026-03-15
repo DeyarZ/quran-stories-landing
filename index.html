@@ -72,11 +72,11 @@ html { scroll-behavior: smooth; }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .faq-answer.open { max-height: 500px; }
 
-    .fade-in-section {
+    .js-ready .fade-in-section {
       opacity: 0; transform: translateY(20px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .fade-in-section.visible { opacity: 1; transform: translateY(0); }
+    .js-ready .fade-in-section.visible { opacity: 1; transform: translateY(0); }
 
     /* Book card hover */
     .book-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
@@ -284,7 +284,7 @@ html { scroll-behavior: smooth; }
   <!-- OUR STORIES (BOOKS GRID) -->
   <!-- ============================================================ -->
   <main>
-  <section id="books" class="fade-in-section py-16 md:py-24 relative overflow-hidden">
+  <section id="books" class="fade-in-section py-12 md:py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-cream via-sage-50/30 to-cream pointer-events-none"></div>
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-14">
@@ -434,7 +434,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- WHAT'S INSIDE -->
   <!-- ============================================================ -->
-  <section class="fade-in-section bg-white py-16 md:py-24">
+  <section class="fade-in-section bg-white py-12 md:py-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
         <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider">What Happens Next</span>
@@ -491,7 +491,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- WHY PARENTS LOVE IT -->
   <!-- ============================================================ -->
-  <section class="fade-in-section py-16 md:py-24 relative overflow-hidden">
+  <section class="fade-in-section py-12 md:py-16 relative overflow-hidden">
     <div class="absolute inset-0 dot-pattern opacity-20 pointer-events-none"></div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-14">
@@ -523,7 +523,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- COMPARISON SECTION -->
   <!-- ============================================================ -->
-  <section class="fade-in-section bg-white py-16 md:py-24">
+  <section class="fade-in-section bg-white py-12 md:py-16">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
         <h2 class="font-display text-3xl sm:text-4xl font-bold text-sage-900 mb-4">This vs. What They're Watching Now</h2>
@@ -562,7 +562,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- TESTIMONIALS -->
   <!-- ============================================================ -->
-  <section class="fade-in-section py-16 md:py-20 relative overflow-hidden">
+  <section class="fade-in-section py-12 md:py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-cream to-white pointer-events-none"></div>
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10">
@@ -607,7 +607,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- NOOR APP PROMO -->
   <!-- ============================================================ -->
-  <section class="fade-in-section py-16 md:py-24 relative overflow-hidden">
+  <section class="fade-in-section py-12 md:py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-sage-50 to-cream pointer-events-none"></div>
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-10">
@@ -649,7 +649,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- FAQ SECTION -->
   <!-- ============================================================ -->
-  <section class="fade-in-section bg-white py-16 md:py-24">
+  <section class="fade-in-section bg-white py-12 md:py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-12">
         <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider">Common Questions</span>
@@ -718,7 +718,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- WAITLIST / MORE STORIES -->
   <!-- ============================================================ -->
-  <section class="fade-in-section py-16 md:py-20 relative overflow-hidden">
+  <section class="fade-in-section py-12 md:py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-br from-sage-50 to-cream pointer-events-none"></div>
     <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
       <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-sage-100">
@@ -737,7 +737,7 @@ html { scroll-behavior: smooth; }
   <!-- ============================================================ -->
   <!-- FINAL CTA -->
   <!-- ============================================================ -->
-  <section id="buy" class="fade-in-section py-16 md:py-24 relative overflow-hidden">
+  <section id="buy" class="fade-in-section py-12 md:py-16 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-cream via-sage-50 to-cream pointer-events-none"></div>
     <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
       <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider star-decoration">Ramadan Special</span>
@@ -823,6 +823,7 @@ html { scroll-behavior: smooth; }
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
+    document.documentElement.classList.add('js-ready');
     document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
 
     function handleWaitlist(e) {
