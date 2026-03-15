@@ -72,11 +72,7 @@ html { scroll-behavior: smooth; }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .faq-answer.open { max-height: 500px; }
 
-    .js-ready .fade-in-section {
-      opacity: 0; transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .js-ready .fade-in-section.visible { opacity: 1; transform: translateY(0); }
+
 
     /* Book card hover */
     .book-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
@@ -252,9 +248,9 @@ html { scroll-behavior: smooth; }
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
             </a>
           <!-- Urgency timer -->
-            <div class="flex items-center gap-2 text-sm text-sage-600 mt-2">
+            <div class="countdown-wrap flex items-center justify-center gap-2 text-sm text-sage-600 mt-2">
               <span class="inline-block w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
-              <span>Ramadan sale ends soon — <strong class="text-sage-800" id="countdown-timer"></strong></span>
+              <span>Ramadan price ends in <strong class="text-sage-800 countdown-timer"></strong> — then back to $8.99</span>
             </div>
           </div>
       </div>
@@ -288,7 +284,12 @@ html { scroll-behavior: smooth; }
     <div class="absolute inset-0 bg-gradient-to-b from-cream via-sage-50/30 to-cream pointer-events-none"></div>
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6">
       <div class="text-center mb-14">
-        <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider star-decoration">Our Collection</span>
+        <div class="countdown-wrap inline-flex items-center gap-2 bg-red-50 border border-red-100 rounded-full px-4 py-1.5 mb-4">
+              <span class="inline-block w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
+              <span class="text-xs font-semibold text-red-700">50% off ends in <strong class="countdown-timer"></strong></span>
+            </div>
+            <br/>
+            <span class="text-sm font-semibold text-gold-600 uppercase tracking-wider star-decoration">Our Collection</span>
         <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-sage-900 mt-4 mb-4">Illustrated Islamic Books for Kids</h2>
         <p class="text-sage-600 text-lg max-w-2xl mx-auto">Each ebook is a standalone illustrated Islamic story book for kids. Collect them all, or start with the one that calls to you.</p>
       </div>
@@ -820,11 +821,7 @@ html { scroll-behavior: smooth; }
 
     // Sticky CTA always visible on mobile
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.documentElement.classList.add('js-ready');
-    document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+
 
     function handleWaitlist(e) {
       e.preventDefault();
@@ -847,16 +844,26 @@ html { scroll-behavior: smooth; }
 <script>
 (function(){
   var end = new Date('2026-03-19T23:59:59Z');
-  var el = document.getElementById('countdown-timer');
-  if(!el) return;
+  var els = document.querySelectorAll('.countdown-timer');
+  if(!els.length) return;
   function update(){
     var now = new Date();
     var diff = end - now;
-    if(diff <= 0){ el.textContent = 'Last chance!'; return; }
+    if(diff <= 0){
+      els.forEach(function(el){
+        var w = el.closest('.countdown-wrap');
+        if(w) w.style.display = 'none';
+      });
+      // Hide sale banner too
+      var banner = document.querySelector('.sale-banner');
+      if(banner) banner.style.display = 'none';
+      return;
+    }
     var d = Math.floor(diff/86400000);
     var h = Math.floor((diff%86400000)/3600000);
     var m = Math.floor((diff%3600000)/60000);
-    el.textContent = d + 'd ' + h + 'h ' + m + 'm left';
+    var text = d > 0 ? d + 'd ' + h + 'h ' + m + 'm' : h + 'h ' + m + 'm';
+    els.forEach(function(el){ el.textContent = text; });
   }
   update();
   setInterval(update, 60000);
