@@ -41,6 +41,10 @@ html { scroll-behavior: smooth; }
     body { font-family: 'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, sans-serif; }
     .font-display { font-family: 'Playfair Display', 'Playfair Display Fallback', Georgia, serif; }
 
+    /* Hide scrollbar on carousel */
+    .snap-x::-webkit-scrollbar { display: none; }
+    .snap-x { -ms-overflow-style: none; scrollbar-width: none; }
+
     .cta-glow {
       box-shadow: 0 0 30px rgba(90, 143, 90, 0.25), 0 4px 15px rgba(90, 143, 90, 0.15);
     }
@@ -433,7 +437,7 @@ html { scroll-behavior: smooth; }
                 <span class="bg-gold-100 text-gold-700 text-xs font-bold px-2 py-0.5 rounded-full">BUNDLE DEAL</span>
               </div>
               <a href="https://salahremind.gumroad.com/l/xvzxcw" data-ah-event="buy_ebook_click" class="cta-glow w-full md:w-auto inline-flex items-center justify-center gap-2 bg-gold-550 hover:bg-gold-600 text-white font-semibold text-base px-8 py-3.5 rounded-2xl transition-all duration-200">
-                Get the Bundle — Risk Free
+                Get the Bundle — $7.99
               </a>
             </div>
           </div>
@@ -444,10 +448,10 @@ html { scroll-behavior: smooth; }
         <p class="text-sage-600 text-sm uppercase tracking-wider font-medium">Or buy individually</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible max-w-5xl mx-auto" style="-webkit-overflow-scrolling:touch; scrollbar-width:none;">
 
         <!-- Book 1: Nusaybah -->
-        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm">
+        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm snap-center flex-shrink-0 w-[85vw] sm:w-auto">
           <div class="bg-gradient-to-br from-sage-50 to-gold-50 px-8 pt-5 pb-8 flex flex-col items-center gap-4">
             <span class="bg-gold-100 text-gold-700 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">⭐ Bestseller ⭐</span>
             <img src="assets/ebook-cover-nusaybah.webp" width="256" height="256" loading="lazy" style="aspect-ratio:1/1" alt="Nusaybah The Brave Heart - illustrated Islamic ebook for kids" class="w-64 h-auto rounded-2xl shadow-lg" />
@@ -472,13 +476,13 @@ html { scroll-behavior: smooth; }
               <span class="bg-gold-100 text-gold-700 text-xs font-bold px-2 py-0.5 rounded-full">🌙 50% OFF - Ramadan</span>
             </div>
             <a href="https://salahremind.gumroad.com/l/zzzjzu" data-ah-event="buy_ebook_click" class="cta-glow w-full inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-base px-6 py-3.5 rounded-2xl transition-all duration-200">
-              Get Nusaybah — Risk Free
+              Get Nusaybah — $3.99
             </a>
           </div>
         </div>
 
         <!-- Book 2: Lubna -->
-        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm">
+        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm snap-center flex-shrink-0 w-[85vw] sm:w-auto">
           <div class="bg-gradient-to-br from-gold-50 to-sage-50 px-8 pt-5 pb-8 flex flex-col items-center gap-4">
             <span class="bg-sage-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">✨ New ✨</span>
             <img src="assets/ebook-cover-lubna.webp" width="256" height="256" loading="lazy" style="aspect-ratio:1/1" alt="Lubna of Córdoba - The Girl Who Loved Books, illustrated Islamic ebook" class="w-64 h-auto rounded-2xl shadow-lg" />
@@ -502,13 +506,13 @@ html { scroll-behavior: smooth; }
               <span class="bg-gold-100 text-gold-700 text-xs font-bold px-2 py-0.5 rounded-full">🌙 50% OFF - Ramadan</span>
             </div>
             <a href="https://salahremind.gumroad.com/l/hzqhyg" data-ah-event="buy_ebook_click" class="cta-glow w-full inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-base px-6 py-3.5 rounded-2xl transition-all duration-200">
-              Get Lubna — Risk Free
+              Get Lubna — $3.99
             </a>
           </div>
         </div>
 
         <!-- Book 3: Asmaa -->
-        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm">
+        <div class="book-card bg-white rounded-3xl overflow-hidden border border-sage-100 shadow-sm snap-center flex-shrink-0 w-[85vw] sm:w-auto">
           <div class="bg-gradient-to-br from-sage-50 to-warm-200 px-8 pt-5 pb-8 flex flex-col items-center gap-4">
             <span class="bg-sage-600 text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">✨ New ✨</span>
             <img src="assets/ebook-cover-asmaa.webp" width="256" height="256" loading="lazy" style="aspect-ratio:1/1" alt="Asmaa Bint Yazeed - The Orator. The Warrior. Illustrated Islamic ebook" class="w-64 h-auto rounded-2xl shadow-lg" />
@@ -532,7 +536,7 @@ html { scroll-behavior: smooth; }
               <span class="bg-gold-100 text-gold-700 text-xs font-bold px-2 py-0.5 rounded-full">🌙 50% OFF - Ramadan</span>
             </div>
             <a href="https://salahremind.gumroad.com/l/zflre" data-ah-event="buy_ebook_click" class="cta-glow w-full inline-flex items-center justify-center gap-2 bg-sage-600 hover:bg-sage-700 text-white font-semibold text-base px-6 py-3.5 rounded-2xl transition-all duration-200">
-              Get Asmaa — Risk Free
+              Get Asmaa — $3.99
             </a>
           </div>
         </div>
@@ -540,11 +544,12 @@ html { scroll-behavior: smooth; }
 
       </div>
 
-      <!-- Guarantee Block -->
-      <div class="mt-10 max-w-md mx-auto text-center border-2 border-sage-200 rounded-2xl px-8 py-6">
-        <p class="text-2xl mb-2">🛡️</p>
-        <h3 class="font-display text-xl font-bold text-sage-900 mb-2">100% Money-Back Guarantee</h3>
-        <p class="text-sm text-sage-600">Don't love it? Full refund, no questions asked. We'd rather you try risk-free than wonder "what if."</p>
+      <!-- Guarantee Block — Hormozi style risk reversal -->
+      <div class="mt-12 max-w-lg mx-auto text-center bg-sage-50 border-2 border-sage-300 rounded-3xl px-8 py-10">
+        <div class="text-5xl mb-4">🛡️</div>
+        <h3 class="font-display text-2xl sm:text-3xl font-bold text-sage-900 mb-3">100% Money-Back Guarantee</h3>
+        <p class="text-base text-sage-700 leading-relaxed mb-4">Read the stories with your kids tonight. If they don't ask for "one more page" — or if you're not happy for <em>any</em> reason — we'll refund every penny. No questions. No hassle.</p>
+        <p class="text-sm font-semibold text-sage-800">You risk nothing. Your kids gain everything.</p>
       </div>
 
 
