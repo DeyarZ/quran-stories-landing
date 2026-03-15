@@ -307,10 +307,12 @@ html { scroll-behavior: smooth; }
       </div>
 
       <!-- Ramadan Sale Banner -->
-      <div class="countdown-wrap bg-sage-900 text-white rounded-2xl px-6 py-4 mb-10 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
-        <span class="text-lg font-semibold">🌙 Ramadan Sale: 50% Off Everything</span>
-        <span class="text-sm opacity-80">Ends in</span>
-        <span class="text-lg font-bold countdown-timer"></span>
+      <div class="countdown-wrap bg-sage-900 rounded-2xl px-8 py-5 mb-10 text-center overflow-hidden relative">
+        <div class="absolute inset-0 opacity-20" style="background:linear-gradient(135deg,#D4A24C 0%,transparent 50%,#D4A24C 100%)"></div>
+        <div class="relative">
+          <p class="text-white text-xl sm:text-2xl font-bold mb-1">🌙 Ramadan Sale — 50% Off</p>
+          <p class="text-sage-300 text-sm">Offer ends in <strong class="text-gold-300 countdown-timer text-base"></strong></p>
+        </div>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
