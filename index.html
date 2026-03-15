@@ -848,6 +848,20 @@ html { scroll-behavior: smooth; }
   ;['scroll','click','touchstart'].forEach(function(e){document.addEventListener(e,load,{once:true,passive:true})})})();
   </script>
 <script>
+// Track all Gumroad button clicks
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href*="gumroad.com"]');
+  if (!link) return;
+  var event = link.getAttribute('data-ah-event') || 'gumroad_click';
+  // Vercel Analytics
+  if (window.va) window.va('event', { name: event });
+  // TikTok Pixel
+  if (typeof ttq !== 'undefined') ttq.track('ClickButton', { content_name: event });
+  // Console log for debugging
+  console.log('[Track]', event);
+});
+</script>
+<script>
 (function(){
   var end = new Date('2026-03-19T23:59:59Z');
   var els = document.querySelectorAll('.countdown-timer');
