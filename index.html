@@ -311,8 +311,17 @@ html { scroll-behavior: smooth; }
       <span class="text-sm font-medium" style="color: #ffd166;">🌙 Limited Ramadan Edition — Only available for our community. <span class="underline" style="color: #ffffff;">Get your copy before it's gone →</span></span>
     </a>
   </div>
-  <!-- Spacer for fixed header -->
-  <div style="height: 44px;"></div>
+  <!-- Spacer for fixed header — JS sets exact height -->
+  <div id="sticky-spacer"></div>
+  <script>
+    (function() {
+      var cta = document.getElementById('sticky-cta');
+      var spacer = document.getElementById('sticky-spacer');
+      function sync() { spacer.style.height = cta.offsetHeight + 'px'; }
+      sync();
+      window.addEventListener('resize', sync);
+    })();
+  </script>
 
   <!-- NAV -->
   <nav class="bg-white/80 backdrop-blur-md border-b border-sage-100">
