@@ -693,6 +693,14 @@ document.addEventListener('click', function(e) {
   if (window.va) window.va('event', { name: event });
   // TikTok Pixel
   if (typeof ttq !== 'undefined') ttq.track('ClickButton', { content_name: event });
+  // Google Ads Conversion
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18023275014/Mm5jCJe4yYocEIa0lZJD',
+      'value': 3.99,
+      'currency': 'EUR'
+    });
+  }
   // Console log for debugging
   console.log('[Track]', event);
 });
